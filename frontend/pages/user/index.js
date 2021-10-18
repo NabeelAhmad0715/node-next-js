@@ -1,22 +1,22 @@
-// import { server } from '../../config'
-import UserList from '../components/UserList'
-import { users } from '../services/UserService'
+import { server } from '../../config'
+import UserList from '../../components/UserList'
+// import { users } from '../../services/UserService'
 
-export default function Home() {
+export default function Home({users}) {
   return (
-    <div>
+    <div className="w-100">
       <UserList users={users} />
     </div>
   )
 }
 
-// export const getStaticProps = async () => {
-//   const res = await fetch(`${server}/api/drinks`)
-//   const drinks = await res.json();
+export const getStaticProps = async () => {
+  const res = await fetch(`${server}/api/users`)
+  const users = await res.json();
 
-//   return {
-//     props: {
-//       drinks,
-//     }
-//   }
-// }
+  return {
+    props: {
+      users,
+    }
+  }
+}

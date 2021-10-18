@@ -2,12 +2,12 @@ import headerStyles from '../styles/Header.module.css'
 
 const Header = () => {
   return (
-    <div>
-      <h1 className={headerStyles.title}>
-        <span>Margarita</span> Drinks
+    <div className="w-100 text-center mt-4">
+      <h1>
+        <span class={headerStyles.themeColor}>Users</span> Records
       </h1>
-      <p className={headerStyles.description}>
-        Keep up to date with the latest margarita drinks
+      <p>
+        latest users records
       </p>
     </div>
   )
